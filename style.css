@@ -4,7 +4,7 @@
     text-decoration: none;
     box-sizing: border-box;
     user-select: none;
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 }
 nav{
     display: flex;
