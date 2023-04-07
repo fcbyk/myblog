@@ -34,34 +34,22 @@ let page = {
     }
 }
 
-let yuque = {
-    getElement(){
-        this.box1 = document.getElementsByClassName("github")
-        this.box2 = document.getElementsByClassName("docs");
-        this.box3 = document.getElementsByClassName("yuque");
-        this.text = document.getElementsByClassName("yuquetext");
+let app = {
+    open(className){
+        document.getElementsByClassName(className)[0].classList.toggle("show");
+        document.getElementsByClassName("blur-filter")[0].classList.toggle("appear");
     },
-    addEvent(){
-        this.getElement();
-        this.box3[0].addEventListener("mouseover",()=>{
-            this.box1[0].style.width = "12rem"
-            this.box2[0].className = "docs plus"
-            this.box3[0].style.height = "12rem"
-            this.box3[0].style.width = "18rem"
-            this.text[0].className = "yuquetext text"
-        },true)
-        this.box3[0].addEventListener("mouseout",()=>{
-            this.box1[0].style.width = "15rem"
-            this.box2[0].className = "docs"
-            this.box3[0].style.height = "6rem"
-            this.box3[0].style.width = "15rem"
-            this.text[0].className = "yuquetext"
+    addEvent(className){
+        document.getElementsByClassName(className)[0].addEventListener("click",()=>{
+            this.open(className)
         },false)
     }
 }
 
 window.onload=()=>{
     page.addEvent();
-    yuque.addEvent();
-    console.log(yuque)
+    app.addEvent("github");
+    app.addEvent("docs");
+    app.addEvent("yuque");
+    app.addEvent("hexo");
 }

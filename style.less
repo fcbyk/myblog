@@ -2,14 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.5s;
-}
-
-// 定义混合，弹性盒子居中
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transition: all 0.7s,filter 0s;
 }
 
 html{
@@ -23,6 +16,64 @@ html{
         color: transparent;    /* 去除默认的颜色和点击后变化的颜色 */    
     }
 } 
+
+
+// @media screen and (max-width: 700px) {html{font-size:60%;}}
+
+.blur-filter{
+    // transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(1px); //毛玻璃
+}
+
+.appear{
+    // transition: all 0.5s;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+// 混合，弹性盒子居中
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxconfig(@margin, @height, @width,@radius){
+    margin: @margin;
+    height: @height;
+    width: @width;
+    border-radius: @radius;
+}
+
+.open(@height, @width){
+    position: absolute;
+    height: @height;
+    width: @width;
+    left: 50%;
+    top: 50%;
+    margin-left: -(@width/2);
+    margin-top: -(@height/2);
+    z-index: 3;
+}
+
+.goto{
+    font-style: italic;
+    font-weight: bold;
+    background-image: linear-gradient(to right, orange, purple);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.4rem;
+    &:hover{
+        background-image: linear-gradient(to right, rgb(255, 177, 31), rgb(164, 8, 164));
+    }
+}
 
 .nav{
     user-select: none;
@@ -62,237 +113,223 @@ html{
     flex-wrap: wrap;
     font-size: 1.6rem;
     padding: 1rem 2rem;
-    .github{
-        margin: 1rem;
-        background-color: #24292f;
-        height: 19rem;
-        width: 15rem;
-        border-radius: 1.6rem;
-        color: #FAFAFA;
-        text-align: center;
-        font-size: 1.4rem;
-        padding-top: 4rem;
-        div{
-            svg{
-                width: 8rem;
-                height: 8rem;
-            }
-            div{
-                font-size: 1rem;
-                opacity: 0;
-                p:nth-child(1){
-                    margin: 0.5rem 1.7rem;
+    .box1{
+        .boxconfig(1rem, 19rem, 15rem,1.6rem);
+        .github{
+            // transition: height 0.7s;
+            background-color: #24292f;
+            .boxconfig(0rem, 19rem, 15rem,1.6rem);
+            .center();
+            color: #FAFAFA;
+            text-align: center;
+            font-size: 1.4rem;
+            filter: brightness(95%);
+            >div{
+                svg{
+                    width: 8rem;
+                    height: 8rem;
                 }
-                p:nth-child(2){
-                    font-style: italic;
-                    font-weight: bold;
-                    background-image: linear-gradient(to right, orange, purple);
-                    -webkit-background-clip: text;
-                    color: transparent;
-                    font-size: 1.6rem;
-                    &:hover{
-                        background-image: linear-gradient(to right, rgb(255, 177, 31), rgb(164, 8, 164));
+                >div{
+                    // font-size: 1rem;
+                    opacity: 0;
+                    display: none;
+                    p:nth-child(1){
+                        margin: 1rem;
+                    }
+                    p:nth-child(2){
+                        .goto();
                     }
                 }
             }
-        }
-        &:hover{
-            padding-top: 2rem;
-            div{
-                svg{
-                    width: 7rem;
-                    height: 7rem;
-                }
-                div{
-                    opacity: 1;
+            &:hover{
+                filter: brightness(100%);
+            }
+            &.show{
+                // transition: height 0.7s;
+                .open(20rem,30rem);
+                >div{
+                    svg{
+                        width: 7rem;
+                        height: 7rem;
+                    }
+                    >div{
+                        display: initial;
+                        opacity: 1;
+                    }
                 }
             }
         }
     }
 
-    .docs{
-        background-color: #ffffff;
-        height: 12rem;
-        width: 15rem;
-        border-radius: 1.6rem;
-        margin: 1rem;
-        text-align: center;
-        border: rgb(203, 203, 203) solid 0.1rem;
-        overflow: hidden;
+    .box2{
+        .boxconfig(1rem, 19rem, 15rem,1.6rem);
         .center();
-        .docslogo{
-            padding: 2rem;
-            width: 15rem;
-            >div{
-                svg{
-                    width: 4rem;
-                    height: 4rem;
-                }
-                >p{
-                    color: black;
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                }
-            }
-            >p{
-                color: rgb(45, 45, 45);
-                font-size: 1rem;
-                display: none;
-                opacity: 0;
-            }
-            p:nth-child(3){
-                font-style: italic;
-            }
-        }
-
-        .opendocs{
-            background-color: rgb(0, 106, 159);
-            width: 0rem;
-            height: 12rem;
-        }
-
-        &:hover{
-            text-align: left;
-            .docslogo{
-                padding: 1rem 1rem;
-                width: 13rem;
-                >div{
-                    display: flex;
-                    svg{
-                        width: 2rem;
-                        height: 2rem;
+        flex-wrap: wrap;
+        .box2-1{
+            .boxconfig(0rem, 12rem, 15rem,1.6rem);
+            .docs{
+                font-size: 1.4rem;
+                background-color: #ffffff;
+                .boxconfig(0rem, 12rem, 15rem,1.6rem);
+                text-align: center;
+                border: rgb(203, 203, 203) solid 0.1rem;
+                overflow: hidden;
+                .center();
+                .docslogo{
+                    width: 15rem;
+                    >div{
+                        svg{
+                            width: 4rem;
+                            height: 4rem;
+                        }
+                        >p{
+                            color: black;
+                            // font-size: 1.2rem;
+                            font-weight: bold;
+                        }
                     }
                     >p{
-                        color: black;
-                        font-size: 1.4rem;
+                        color: rgb(45, 45, 45);
+                        // font-size: 1rem;
+                        display: none;
+                        opacity: 0;
                     }
-                    padding-bottom: 0.5rem;
+                    p:nth-child(3){
+                        font-style: italic;
+                        padding-top: 1rem;
+                    }
                 }
-                >p{
-                    display: inline-block;
-                    opacity: 1;
-                }
-            }
-            .opendocs{
-                background-color: rgb(1, 86, 129);
-                width: 2rem;
-            }
-        }
-    }
-
-    .yuque{
-        background-color: #ffffff;
-        height: 6rem;
-        width: 15rem;
-        border-radius: 1.6rem;
-        margin: 1rem;
-        text-align: center;
-        border: rgb(203, 203, 203) solid 0.1rem;
-        overflow: hidden;
-        // .center();
-        padding: 1rem;
-        .center();
-        flex-wrap: wrap;
-        img{
-            width: 7rem;
-        }
-        p{
-            font-size: 1rem;
-            display: none;
-            opacity: 0;
-        }
-        a{
-            font-style: italic;
-            font-weight: bold;
-            background-image: linear-gradient(to right, orange, purple);
-            -webkit-background-clip: text;
-            color: transparent;
-            font-size: 1.4rem;
-            &:hover{
-                background-image: linear-gradient(to right, rgb(255, 177, 31), rgb(164, 8, 164));
-            }
-        }
-        .text{
-            display: block;
-            opacity: 1;
-        }
-    }
-
-    .plus{
-        height: 6rem;
-        width: 18rem;
-        .docslogo{
-            width: 18rem;
-            >div{
-                svg{
-                    width: 2rem;
-                    height: 2rem;
-                }
-            }
-        }
-
-        &:hover{
-            .docslogo{
-                padding: 1rem 1rem;
-                width: 16rem;
-            }
-        }
-    }
-
-    .hexo{
-        background-color: #ffffff;
-        height: 16rem;
-        width: 15rem;
-        border-radius: 1.6rem;
-        margin: 1rem;
-        // text-align: center;
-        border: rgb(203, 203, 203) solid 0.1rem;
-        overflow: hidden;
-        // .center();
-        padding: 1rem;
-        .center();
-        flex-wrap: wrap;
-        img{
-            width: 5rem;
-        }
-        .hexologo{
-            .center();
-            font-weight: bold;
-            padding-bottom: 0.5rem;
-            transition: all 0s;
-        }
-        .hexotext{
-            font-size: 1rem;
-            display: none;
-        }
-        .hexogo{
-            display: none;
-            >a{
-                color: #ffffff;
-                >div{
-                    height: 2.5rem;
-                    width: 5rem;
-                    border-radius: 2rem;
+                .opendocs{
                     background-color: rgb(0, 106, 159);
-                    .center();
-                    font-size: 1rem
+                    width: 0rem;
+                    height: 30rem;
+                }
+                &.show{
+                    .open(20rem, 30rem);
+                    text-align: left;
+                    .docslogo{
+                        padding: 3rem;
+                        width: 30rem;
+                        >div{
+                            .center();
+                            justify-content: start;
+                            svg{
+                                width: 4rem;
+                                height: 4rem;
+                            }
+                            >p{
+                                color: black;
+                                // font-size: 1.4rem;
+                            }
+                            padding-bottom: 1rem;
+                        }
+                        >p{
+                            display: inline-block;
+                            opacity: 1;
+                        }
+                    }
+                    .opendocs{
+                        background-color: rgb(1, 86, 129);
+                        width: 2rem;
+                    }
                 }
             }
         }
+        .box2-2{
+            .boxconfig(0rem, 6rem, 15rem,1.6rem);
+            margin-top: 1rem;
+            .yuque{
+                font-size: 1.4rem;
+                background-color: #ffffff;
+                .boxconfig(0rem, 6rem, 15rem,1.6rem);
+                text-align: center;
+                border: rgb(203, 203, 203) solid 0.1rem;
+                overflow: hidden;
+                // .center();
+                .center();
+                flex-wrap: wrap;
+                img{
+                    width: 7rem;
+                }
+                p{
+                    padding-top: 1rem;
+                    // font-size: 1rem;
+                    display: none;
+                    opacity: 0;
+                }
+                a>p{
+                    .goto();
+                }
+                &.show{
+                    .open(20rem, 30rem);
+                    padding: 3rem;
+                    p{
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 
-        &:hover{
+    .box3{
+        .boxconfig(1rem, 8rem, 15rem,1.6rem);
+        .hexo{
+            font-size: 1.4rem;
+            background-color: #ffffff;
+            .boxconfig(0rem, 8rem, 15rem,1.6rem);
+            // text-align: center;
+            border: rgb(203, 203, 203) solid 0.1rem;
+            overflow: hidden;
+            // .center();
+            padding: 1rem;
+            .center();
+            flex-wrap: wrap;
+            // font-size: 1.5rem;
             img{
-                width: 2.5rem;
+                width: 4rem;
             }
             .hexologo{
-                font-size: 1.4rem;
+                .center();
+                font-weight: bold;
+                padding-bottom: 0.5rem;
                 transition: all 0s;
             }
             .hexotext{
-                display: block;
+                // font-size: 1rem;
+                display: none;
             }
             .hexogo{
-                .center();
+                display: none;
+                >a{
+                    color: #ffffff;
+                    >div{
+                        height: 2.5rem;
+                        width: 5rem;
+                        border-radius: 2rem;
+                        background-color: rgb(0, 106, 159);
+                        .center();
+                        // font-size: 1rem
+                    }
+                }
+            }
+    
+            &.show{
+                .open(20rem, 30rem);
+                padding: 3rem;
+                img{
+                    width: 2.5rem;
+                }
+                .hexologo{
+                    // font-size: 1.4rem;
+                    transition: all 0s;
+                }
+                .hexotext{
+                    display: block;
+                }
+                .hexogo{
+                    .center();
+                }
             }
         }
     }

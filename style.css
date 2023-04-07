@@ -2,12 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.5s;
-}
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: all 0.7s, filter 0s;
 }
 html {
   font-size: 62.5%;
@@ -21,6 +16,36 @@ html a {
   /* 去除默认的下划线 */
   color: transparent;
   /* 去除默认的颜色和点击后变化的颜色 */
+}
+.blur-filter {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(1px);
+}
+.appear {
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.25);
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goto {
+  font-style: italic;
+  font-weight: bold;
+  background-image: linear-gradient(to right, orange, purple);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.4rem;
+}
+.goto:hover {
+  background-image: linear-gradient(to right, #ffb11f, #a408a4);
 }
 .nav {
   user-select: none;
@@ -59,140 +84,192 @@ html a {
   font-size: 1.6rem;
   padding: 1rem 2rem;
 }
-.computer .github {
+.computer .box1 {
   margin: 1rem;
-  background-color: #24292f;
   height: 19rem;
   width: 15rem;
   border-radius: 1.6rem;
+}
+.computer .box1 .github {
+  background-color: #24292f;
+  margin: 0rem;
+  height: 19rem;
+  width: 15rem;
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #FAFAFA;
   text-align: center;
   font-size: 1.4rem;
-  padding-top: 4rem;
+  filter: brightness(95%);
 }
-.computer .github div svg {
+.computer .box1 .github > div svg {
   width: 8rem;
   height: 8rem;
 }
-.computer .github div div {
-  font-size: 1rem;
+.computer .box1 .github > div > div {
   opacity: 0;
+  display: none;
 }
-.computer .github div div p:nth-child(1) {
-  margin: 0.5rem 1.7rem;
+.computer .box1 .github > div > div p:nth-child(1) {
+  margin: 1rem;
 }
-.computer .github div div p:nth-child(2) {
+.computer .box1 .github > div > div p:nth-child(2) {
   font-style: italic;
   font-weight: bold;
   background-image: linear-gradient(to right, orange, purple);
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
-.computer .github div div p:nth-child(2):hover {
+.computer .box1 .github > div > div p:nth-child(2):hover {
   background-image: linear-gradient(to right, #ffb11f, #a408a4);
 }
-.computer .github:hover {
-  padding-top: 2rem;
+.computer .box1 .github:hover {
+  filter: brightness(100%);
 }
-.computer .github:hover div svg {
+.computer .box1 .github.show {
+  position: absolute;
+  height: 20rem;
+  width: 30rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -15rem;
+  margin-top: -10rem;
+  z-index: 3;
+}
+.computer .box1 .github.show > div svg {
   width: 7rem;
   height: 7rem;
 }
-.computer .github:hover div div {
+.computer .box1 .github.show > div > div {
+  display: initial;
   opacity: 1;
 }
-.computer .docs {
-  background-color: #ffffff;
-  height: 12rem;
+.computer .box2 {
+  margin: 1rem;
+  height: 19rem;
   width: 15rem;
   border-radius: 1.6rem;
-  margin: 1rem;
-  text-align: center;
-  border: #cbcbcb solid 0.1rem;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.computer .docs .docslogo {
-  padding: 2rem;
-  width: 15rem;
-}
-.computer .docs .docslogo > div svg {
-  width: 4rem;
-  height: 4rem;
-}
-.computer .docs .docslogo > div > p {
-  color: black;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-.computer .docs .docslogo > p {
-  color: #2d2d2d;
-  font-size: 1rem;
-  display: none;
-  opacity: 0;
-}
-.computer .docs .docslogo p:nth-child(3) {
-  font-style: italic;
-}
-.computer .docs .opendocs {
-  background-color: #006a9f;
-  width: 0rem;
-  height: 12rem;
-}
-.computer .docs:hover {
-  text-align: left;
-}
-.computer .docs:hover .docslogo {
-  padding: 1rem 1rem;
-  width: 13rem;
-}
-.computer .docs:hover .docslogo > div {
-  display: flex;
-  padding-bottom: 0.5rem;
-}
-.computer .docs:hover .docslogo > div svg {
-  width: 2rem;
-  height: 2rem;
-}
-.computer .docs:hover .docslogo > div > p {
-  color: black;
-  font-size: 1.4rem;
-}
-.computer .docs:hover .docslogo > p {
-  display: inline-block;
-  opacity: 1;
-}
-.computer .docs:hover .opendocs {
-  background-color: #015681;
-  width: 2rem;
-}
-.computer .yuque {
-  background-color: #ffffff;
-  height: 6rem;
-  width: 15rem;
-  border-radius: 1.6rem;
-  margin: 1rem;
-  text-align: center;
-  border: #cbcbcb solid 0.1rem;
-  overflow: hidden;
-  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.computer .yuque img {
-  width: 7rem;
+.computer .box2 .box2-1 {
+  margin: 0rem;
+  height: 12rem;
+  width: 15rem;
+  border-radius: 1.6rem;
 }
-.computer .yuque p {
-  font-size: 1rem;
+.computer .box2 .box2-1 .docs {
+  font-size: 1.4rem;
+  background-color: #ffffff;
+  margin: 0rem;
+  height: 12rem;
+  width: 15rem;
+  border-radius: 1.6rem;
+  text-align: center;
+  border: #cbcbcb solid 0.1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.computer .box2 .box2-1 .docs .docslogo {
+  width: 15rem;
+}
+.computer .box2 .box2-1 .docs .docslogo > div svg {
+  width: 4rem;
+  height: 4rem;
+}
+.computer .box2 .box2-1 .docs .docslogo > div > p {
+  color: black;
+  font-weight: bold;
+}
+.computer .box2 .box2-1 .docs .docslogo > p {
+  color: #2d2d2d;
   display: none;
   opacity: 0;
 }
-.computer .yuque a {
+.computer .box2 .box2-1 .docs .docslogo p:nth-child(3) {
+  font-style: italic;
+  padding-top: 1rem;
+}
+.computer .box2 .box2-1 .docs .opendocs {
+  background-color: #006a9f;
+  width: 0rem;
+  height: 30rem;
+}
+.computer .box2 .box2-1 .docs.show {
+  position: absolute;
+  height: 20rem;
+  width: 30rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -15rem;
+  margin-top: -10rem;
+  z-index: 3;
+  text-align: left;
+}
+.computer .box2 .box2-1 .docs.show .docslogo {
+  padding: 3rem;
+  width: 30rem;
+}
+.computer .box2 .box2-1 .docs.show .docslogo > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  padding-bottom: 1rem;
+}
+.computer .box2 .box2-1 .docs.show .docslogo > div svg {
+  width: 4rem;
+  height: 4rem;
+}
+.computer .box2 .box2-1 .docs.show .docslogo > div > p {
+  color: black;
+}
+.computer .box2 .box2-1 .docs.show .docslogo > p {
+  display: inline-block;
+  opacity: 1;
+}
+.computer .box2 .box2-1 .docs.show .opendocs {
+  background-color: #015681;
+  width: 2rem;
+}
+.computer .box2 .box2-2 {
+  margin: 0rem;
+  height: 6rem;
+  width: 15rem;
+  border-radius: 1.6rem;
+  margin-top: 1rem;
+}
+.computer .box2 .box2-2 .yuque {
+  font-size: 1.4rem;
+  background-color: #ffffff;
+  margin: 0rem;
+  height: 6rem;
+  width: 15rem;
+  border-radius: 1.6rem;
+  text-align: center;
+  border: #cbcbcb solid 0.1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.computer .box2 .box2-2 .yuque img {
+  width: 7rem;
+}
+.computer .box2 .box2-2 .yuque p {
+  padding-top: 1rem;
+  display: none;
+  opacity: 0;
+}
+.computer .box2 .box2-2 .yuque a > p {
   font-style: italic;
   font-weight: bold;
   background-image: linear-gradient(to right, orange, purple);
@@ -200,34 +277,37 @@ html a {
   color: transparent;
   font-size: 1.4rem;
 }
-.computer .yuque a:hover {
+.computer .box2 .box2-2 .yuque a > p:hover {
   background-image: linear-gradient(to right, #ffb11f, #a408a4);
 }
-.computer .yuque .text {
+.computer .box2 .box2-2 .yuque.show {
+  position: absolute;
+  height: 20rem;
+  width: 30rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -15rem;
+  margin-top: -10rem;
+  z-index: 3;
+  padding: 3rem;
+}
+.computer .box2 .box2-2 .yuque.show p {
   display: block;
   opacity: 1;
 }
-.computer .plus {
-  height: 6rem;
-  width: 18rem;
-}
-.computer .plus .docslogo {
-  width: 18rem;
-}
-.computer .plus .docslogo > div svg {
-  width: 2rem;
-  height: 2rem;
-}
-.computer .plus:hover .docslogo {
-  padding: 1rem 1rem;
-  width: 16rem;
-}
-.computer .hexo {
-  background-color: #ffffff;
-  height: 16rem;
+.computer .box3 {
+  margin: 1rem;
+  height: 8rem;
   width: 15rem;
   border-radius: 1.6rem;
-  margin: 1rem;
+}
+.computer .box3 .hexo {
+  font-size: 1.4rem;
+  background-color: #ffffff;
+  margin: 0rem;
+  height: 8rem;
+  width: 15rem;
+  border-radius: 1.6rem;
   border: #cbcbcb solid 0.1rem;
   overflow: hidden;
   padding: 1rem;
@@ -236,10 +316,10 @@ html a {
   align-items: center;
   flex-wrap: wrap;
 }
-.computer .hexo img {
-  width: 5rem;
+.computer .box3 .hexo img {
+  width: 4rem;
 }
-.computer .hexo .hexologo {
+.computer .box3 .hexo .hexologo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,17 +327,16 @@ html a {
   padding-bottom: 0.5rem;
   transition: all 0s;
 }
-.computer .hexo .hexotext {
-  font-size: 1rem;
+.computer .box3 .hexo .hexotext {
   display: none;
 }
-.computer .hexo .hexogo {
+.computer .box3 .hexo .hexogo {
   display: none;
 }
-.computer .hexo .hexogo > a {
+.computer .box3 .hexo .hexogo > a {
   color: #ffffff;
 }
-.computer .hexo .hexogo > a > div {
+.computer .box3 .hexo .hexogo > a > div {
   height: 2.5rem;
   width: 5rem;
   border-radius: 2rem;
@@ -265,19 +344,28 @@ html a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
 }
-.computer .hexo:hover img {
+.computer .box3 .hexo.show {
+  position: absolute;
+  height: 20rem;
+  width: 30rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -15rem;
+  margin-top: -10rem;
+  z-index: 3;
+  padding: 3rem;
+}
+.computer .box3 .hexo.show img {
   width: 2.5rem;
 }
-.computer .hexo:hover .hexologo {
-  font-size: 1.4rem;
+.computer .box3 .hexo.show .hexologo {
   transition: all 0s;
 }
-.computer .hexo:hover .hexotext {
+.computer .box3 .hexo.show .hexotext {
   display: block;
 }
-.computer .hexo:hover .hexogo {
+.computer .box3 .hexo.show .hexogo {
   display: flex;
   justify-content: center;
   align-items: center;
