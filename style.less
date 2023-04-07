@@ -238,6 +238,64 @@ html{
             }
         }
     }
+
+    .hexo{
+        background-color: #ffffff;
+        height: 16rem;
+        width: 15rem;
+        border-radius: 1.6rem;
+        margin: 1rem;
+        // text-align: center;
+        border: rgb(203, 203, 203) solid 0.1rem;
+        overflow: hidden;
+        // .center();
+        padding: 1rem;
+        .center();
+        flex-wrap: wrap;
+        img{
+            width: 5rem;
+        }
+        .hexologo{
+            .center();
+            font-weight: bold;
+            padding-bottom: 0.5rem;
+            transition: all 0s;
+        }
+        .hexotext{
+            font-size: 1rem;
+            display: none;
+        }
+        .hexogo{
+            display: none;
+            >a{
+                color: #ffffff;
+                >div{
+                    height: 2.5rem;
+                    width: 5rem;
+                    border-radius: 2rem;
+                    background-color: rgb(0, 106, 159);
+                    .center();
+                    font-size: 1rem
+                }
+            }
+        }
+
+        &:hover{
+            img{
+                width: 2.5rem;
+            }
+            .hexologo{
+                font-size: 1.4rem;
+                transition: all 0s;
+            }
+            .hexotext{
+                display: block;
+            }
+            .hexogo{
+                .center();
+            }
+        }
+    }
 }
 
 .footer{

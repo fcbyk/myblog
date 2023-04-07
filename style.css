@@ -222,6 +222,66 @@ html a {
   padding: 1rem 1rem;
   width: 16rem;
 }
+.computer .hexo {
+  background-color: #ffffff;
+  height: 16rem;
+  width: 15rem;
+  border-radius: 1.6rem;
+  margin: 1rem;
+  border: #cbcbcb solid 0.1rem;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.computer .hexo img {
+  width: 5rem;
+}
+.computer .hexo .hexologo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  transition: all 0s;
+}
+.computer .hexo .hexotext {
+  font-size: 1rem;
+  display: none;
+}
+.computer .hexo .hexogo {
+  display: none;
+}
+.computer .hexo .hexogo > a {
+  color: #ffffff;
+}
+.computer .hexo .hexogo > a > div {
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 2rem;
+  background-color: #006a9f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+.computer .hexo:hover img {
+  width: 2.5rem;
+}
+.computer .hexo:hover .hexologo {
+  font-size: 1.4rem;
+  transition: all 0s;
+}
+.computer .hexo:hover .hexotext {
+  display: block;
+}
+.computer .hexo:hover .hexogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer {
   display: flex;
   justify-content: center;
