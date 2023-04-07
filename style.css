@@ -104,7 +104,7 @@ html a {
 }
 .computer .docs {
   background-color: #ffffff;
-  height: 10rem;
+  height: 12rem;
   width: 15rem;
   border-radius: 1.6rem;
   margin: 1rem;
@@ -140,7 +140,7 @@ html a {
 .computer .docs .opendocs {
   background-color: #006a9f;
   width: 0rem;
-  height: 10rem;
+  height: 12rem;
 }
 .computer .docs:hover {
   text-align: left;
@@ -168,6 +168,59 @@ html a {
 .computer .docs:hover .opendocs {
   background-color: #015681;
   width: 2rem;
+}
+.computer .yuque {
+  background-color: #ffffff;
+  height: 6rem;
+  width: 15rem;
+  border-radius: 1.6rem;
+  margin: 1rem;
+  text-align: center;
+  border: #cbcbcb solid 0.1rem;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.computer .yuque img {
+  width: 7rem;
+}
+.computer .yuque p {
+  font-size: 1rem;
+  display: none;
+  opacity: 0;
+}
+.computer .yuque a {
+  font-style: italic;
+  font-weight: bold;
+  background-image: linear-gradient(to right, orange, purple);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.4rem;
+}
+.computer .yuque a:hover {
+  background-image: linear-gradient(to right, #ffb11f, #a408a4);
+}
+.computer .yuque .text {
+  display: block;
+  opacity: 1;
+}
+.computer .plus {
+  height: 6rem;
+  width: 18rem;
+}
+.computer .plus .docslogo {
+  width: 18rem;
+}
+.computer .plus .docslogo > div svg {
+  width: 2rem;
+  height: 2rem;
+}
+.computer .plus:hover .docslogo {
+  padding: 1rem 1rem;
+  width: 16rem;
 }
 .footer {
   display: flex;
