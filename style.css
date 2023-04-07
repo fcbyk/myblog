@@ -8,7 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 html {
   font-size: 62.5%;
@@ -110,28 +109,70 @@ html a {
   border-radius: 1.6rem;
   margin: 1rem;
   text-align: center;
-  padding-top: 2rem;
-  border: #a2a2a2 solid 0.1rem;
-  opacity: 0.8;
-  transition: all 0s;
+  border: #cbcbcb solid 0.1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.computer .docs svg {
+.computer .docs .docslogo {
+  padding: 2rem;
+  width: 15rem;
+}
+.computer .docs .docslogo > div svg {
   width: 4rem;
   height: 4rem;
 }
-.computer .docs p {
+.computer .docs .docslogo > div > p {
   color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.computer .docs .docslogo > p {
+  color: #2d2d2d;
   font-size: 1rem;
+  display: none;
+  opacity: 0;
+}
+.computer .docs .docslogo p:nth-child(3) {
+  font-style: italic;
+}
+.computer .docs .opendocs {
+  background-color: #006a9f;
+  width: 0rem;
+  height: 10rem;
 }
 .computer .docs:hover {
-  transition: all 0s;
+  text-align: left;
+}
+.computer .docs:hover .docslogo {
+  padding: 1rem 1rem;
+  width: 13rem;
+}
+.computer .docs:hover .docslogo > div {
+  display: flex;
+  padding-bottom: 0.5rem;
+}
+.computer .docs:hover .docslogo > div svg {
+  width: 2rem;
+  height: 2rem;
+}
+.computer .docs:hover .docslogo > div > p {
+  color: black;
+  font-size: 1.4rem;
+}
+.computer .docs:hover .docslogo > p {
+  display: inline-block;
   opacity: 1;
+}
+.computer .docs:hover .opendocs {
+  background-color: #015681;
+  width: 2rem;
 }
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   width: 100vw;
   position: fixed;
   bottom: 0;

@@ -10,7 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 html{
@@ -118,22 +117,66 @@ html{
         border-radius: 1.6rem;
         margin: 1rem;
         text-align: center;
-        padding-top: 2rem;
-        border: rgb(162, 162, 162) solid 0.1rem;
-        opacity: 0.8;
-        
-        svg{
-            width: 4rem;
-            height: 4rem;
+        border: rgb(203, 203, 203) solid 0.1rem;
+        overflow: hidden;
+        .center();
+        .docslogo{
+            padding: 2rem;
+            width: 15rem;
+            >div{
+                svg{
+                    width: 4rem;
+                    height: 4rem;
+                }
+                >p{
+                    color: black;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+            }
+            >p{
+                color: rgb(45, 45, 45);
+                font-size: 1rem;
+                display: none;
+                opacity: 0;
+            }
+            p:nth-child(3){
+                font-style: italic;
+            }
         }
-        p{
-            color: black;
-            font-size: 1rem;
+
+        .opendocs{
+            background-color: rgb(0, 106, 159);
+            width: 0rem;
+            height: 10rem;
         }
-        transition: all 0s;
+
         &:hover{
-            transition: all 0s;
-            opacity: 1;
+            text-align: left;
+            .docslogo{
+                padding: 1rem 1rem;
+                width: 13rem;
+                >div{
+                    display: flex;
+                    svg{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                    >p{
+                        color: black;
+                        font-size: 1.4rem;
+                    }
+                    padding-bottom: 0.5rem;
+                }
+                >p{
+                    display: inline-block;
+                    opacity: 1;
+                }
+            }
+            .opendocs{
+                background-color: rgb(1, 86, 129);
+                width: 2rem;
+            }
         }
     }
 }
