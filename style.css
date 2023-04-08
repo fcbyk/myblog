@@ -134,14 +134,13 @@ html a {
 }
 .computer .box1 .github.show {
   position: absolute;
-  height: 20rem;
+  height: 30rem;
   width: 30rem;
   left: 50%;
   top: 50%;
   margin-left: -15rem;
-  margin-top: -10rem;
+  margin-top: -15rem;
   z-index: 3;
-  transition: height 0.7s;
 }
 .computer .box1 .github.show > div svg {
   width: 7rem;
