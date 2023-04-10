@@ -1,3 +1,5 @@
+import style from "./style.less"
+
 let page = {
     getElement(){
         this.nav1 = document.getElementById("nav-1")
