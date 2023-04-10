@@ -2,20 +2,55 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: height 0.6s;
 }
 html {
   font-size: 62.5%;
-  /* 因为100%=16px，1px=6.25%，所以10px=62.5%， */
 }
 html body {
   background-color: #FAFAFA;
 }
+html body .nav {
+  user-select: none;
+  display: flex;
+  padding: 3rem;
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #9e9e9e;
+}
+html body .nav div {
+  margin: 0rem 1rem;
+  transition: all 0.2s;
+}
+html body .nav :nth-child(1) {
+  font-weight: bold;
+  color: black;
+}
+html body .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+}
+html body .footer a {
+  color: #303133;
+  transition: all 0s;
+}
+html body .footer a:hover {
+  color: #000000;
+}
+html body .footer a p {
+  transition: all 0s;
+}
 html a {
   text-decoration: none;
-  /* 去除默认的下划线 */
-  color: transparent;
-  /* 去除默认的颜色和点击后变化的颜色 */
+  color: black;
+}
+html p {
+  margin: 0.6rem 0rem;
 }
 .blur-filter {
   transition: all 0.6s;
@@ -38,6 +73,7 @@ html a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .goto {
   font-style: italic;
@@ -50,21 +86,19 @@ html a {
 .goto:hover {
   background-image: linear-gradient(to right, #ffb11f, #a408a4);
 }
-.nav {
-  user-select: none;
+.buttongo {
   display: flex;
-  padding: 3rem;
-  padding-bottom: 1rem;
-  font-size: 2.5rem;
-  color: #9e9e9e;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #ffffff;
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 2rem;
+  background-color: #006a9f;
 }
-.nav div {
-  margin: 0rem 1rem;
-  transition: all 0.2s;
-}
-.nav :nth-child(1) {
-  font-weight: bold;
-  color: black;
+.border {
+  border: #cbcbcb solid 0.1rem;
 }
 .painting {
   user-select: none;
@@ -84,7 +118,8 @@ html a {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  text-align: center;
   padding: 1rem 2rem;
 }
 .computer .box1 {
@@ -92,306 +127,233 @@ html a {
   height: 19rem;
   width: 15rem;
   border-radius: 1.6rem;
+  background-color: transparent;
+  color: black;
+}
+.computer .box1 .title {
+  font-weight: bold;
 }
 .computer .box1 .github {
-  background-color: #24292f;
   margin: 0rem;
   height: 19rem;
   width: 15rem;
   border-radius: 1.6rem;
+  background-color: #24292f;
+  color: #FAFAFA;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FAFAFA;
-  text-align: center;
-  font-size: 1.4rem;
-  filter: brightness(95%);
+  flex-wrap: wrap;
 }
-.computer .box1 .github > div svg {
+.computer .box1 .github .title {
+  font-weight: normal;
+}
+.computer .box1 .github .icon {
   width: 8rem;
-  height: 8rem;
+  height: auto;
 }
-.computer .box1 .github > div > div {
-  opacity: 0;
+.computer .box1 .github .detail {
   display: none;
-}
-.computer .box1 .github > div > div p:nth-child(1) {
-  margin: 1rem;
-}
-.computer .box1 .github > div > div p:nth-child(2) {
-  font-style: italic;
-  font-weight: bold;
-  background-image: linear-gradient(to right, orange, purple);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 1.4rem;
-}
-.computer .box1 .github > div > div p:nth-child(2):hover {
-  background-image: linear-gradient(to right, #ffb11f, #a408a4);
-}
-.computer .box1 .github:hover {
-  filter: brightness(100%);
 }
 .computer .box1 .github.show {
   position: absolute;
-  height: 30rem;
+  height: auto;
   width: 30rem;
   left: 50%;
   top: 50%;
   margin-left: -15rem;
   margin-top: -15rem;
   z-index: 3;
+  padding: 3rem 2rem;
 }
-.computer .box1 .github.show > div svg {
+.computer .box1 .github.show .icon {
   width: 7rem;
-  height: 7rem;
+  height: auto;
 }
-.computer .box1 .github.show > div > div {
-  display: initial;
-  opacity: 1;
+.computer .box1 .github.show .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .computer .box2 {
   margin: 1rem;
   height: 19rem;
   width: 15rem;
   border-radius: 1.6rem;
+  background-color: transparent;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.computer .box2 .title {
+  font-weight: bold;
 }
 .computer .box2 .box2-1 {
   margin: 0rem;
   height: 12rem;
   width: 15rem;
   border-radius: 1.6rem;
+  background-color: #ffffff;
+  color: black;
+}
+.computer .box2 .box2-1 .title {
+  font-weight: bold;
 }
 .computer .box2 .box2-1 .docs {
-  font-size: 1.4rem;
-  background-color: #ffffff;
   margin: 0rem;
   height: 12rem;
   width: 15rem;
   border-radius: 1.6rem;
-  text-align: center;
-  border: #cbcbcb solid 0.1rem;
-  overflow: hidden;
+  background-color: #ffffff;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  border: #cbcbcb solid 0.1rem;
 }
-.computer .box2 .box2-1 .docs .docslogo {
-  width: 15rem;
-}
-.computer .box2 .box2-1 .docs .docslogo > div svg {
-  width: 4rem;
-  height: 4rem;
-}
-.computer .box2 .box2-1 .docs .docslogo > div > p {
-  color: black;
+.computer .box2 .box2-1 .docs .title {
   font-weight: bold;
 }
-.computer .box2 .box2-1 .docs .docslogo > p {
-  color: #2d2d2d;
+.computer .box2 .box2-1 .docs .icon {
+  width: 4rem;
+  height: auto;
+}
+.computer .box2 .box2-1 .docs .detail {
   display: none;
-  opacity: 0;
-}
-.computer .box2 .box2-1 .docs .docslogo p:nth-child(3) {
-  font-style: italic;
-  padding-top: 1rem;
-}
-.computer .box2 .box2-1 .docs .opendocs {
-  background-color: #006a9f;
-  width: 0rem;
-  height: 30rem;
 }
 .computer .box2 .box2-1 .docs.show {
-  transition: height 0.7s;
   position: absolute;
-  height: 20rem;
+  height: auto;
   width: 30rem;
   left: 50%;
   top: 50%;
   margin-left: -15rem;
-  margin-top: -10rem;
+  margin-top: -15rem;
   z-index: 3;
-  text-align: left;
+  padding: 3rem 2rem;
 }
-.computer .box2 .box2-1 .docs.show .docslogo {
-  padding: 3rem;
-  width: 30rem;
+.computer .box2 .box2-1 .docs.show .icon {
+  width: 3rem;
+  height: auto;
 }
-.computer .box2 .box2-1 .docs.show .docslogo > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: start;
-  padding-bottom: 1rem;
-}
-.computer .box2 .box2-1 .docs.show .docslogo > div svg {
-  width: 4rem;
-  height: 4rem;
-}
-.computer .box2 .box2-1 .docs.show .docslogo > div > p {
-  color: black;
-}
-.computer .box2 .box2-1 .docs.show .docslogo > p {
-  display: inline-block;
-  opacity: 1;
-}
-.computer .box2 .box2-1 .docs.show .opendocs {
-  background-color: #015681;
-  width: 2rem;
-}
-.computer .box2 .box2-2 {
-  margin: 0rem;
-  height: 6rem;
-  width: 15rem;
-  border-radius: 1.6rem;
-  margin-top: 1rem;
-}
-.computer .box2 .box2-2 .yuque {
-  font-size: 1.4rem;
-  background-color: #ffffff;
-  margin: 0rem;
-  height: 6rem;
-  width: 15rem;
-  border-radius: 1.6rem;
-  text-align: center;
-  border: #cbcbcb solid 0.1rem;
-  overflow: hidden;
+.computer .box2 .box2-1 .docs.show .detail {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.computer .box2 .box2-2 .yuque img {
-  width: 7rem;
+.computer .box2 .box2-2 {
+  margin-top: 1rem;
+  margin: 0rem;
+  height: 6rem;
+  width: 15rem;
+  border-radius: 1.6rem;
+  background-color: transparent;
+  color: black;
 }
-.computer .box2 .box2-2 .yuque p {
-  padding-top: 1rem;
-  display: none;
-  opacity: 0;
-}
-.computer .box2 .box2-2 .yuque a > p {
-  font-style: italic;
+.computer .box2 .box2-2 .title {
   font-weight: bold;
-  background-image: linear-gradient(to right, orange, purple);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 1.4rem;
 }
-.computer .box2 .box2-2 .yuque a > p:hover {
-  background-image: linear-gradient(to right, #ffb11f, #a408a4);
+.computer .box2 .box2-2 .yuque {
+  margin: 0rem;
+  height: 6rem;
+  width: 15rem;
+  border-radius: 1.6rem;
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: #cbcbcb solid 0.1rem;
+}
+.computer .box2 .box2-2 .yuque .title {
+  font-weight: bold;
+}
+.computer .box2 .box2-2 .yuque .icon {
+  width: 7rem;
+  height: auto;
+}
+.computer .box2 .box2-2 .yuque .detail {
+  display: none;
 }
 .computer .box2 .box2-2 .yuque.show {
-  transition: height 0.7s;
   position: absolute;
-  height: 20rem;
+  height: auto;
   width: 30rem;
   left: 50%;
   top: 50%;
   margin-left: -15rem;
-  margin-top: -10rem;
+  margin-top: -15rem;
   z-index: 3;
-  padding: 3rem;
+  padding: 3rem 2rem;
 }
-.computer .box2 .box2-2 .yuque.show p {
-  display: block;
-  opacity: 1;
+.computer .box2 .box2-2 .yuque.show .icon {
+  width: 7rem;
+  height: auto;
+}
+.computer .box2 .box2-2 .yuque.show .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .computer .box3 {
   margin: 1rem;
   height: 8rem;
   width: 15rem;
   border-radius: 1.6rem;
+  background-color: transparent;
+  color: black;
+}
+.computer .box3 .title {
+  font-weight: bold;
 }
 .computer .box3 .hexo {
-  font-size: 1.4rem;
-  background-color: #ffffff;
   margin: 0rem;
-  height: 8rem;
+  height: 6rem;
   width: 15rem;
   border-radius: 1.6rem;
+  background-color: #ffffff;
+  color: black;
   border: #cbcbcb solid 0.1rem;
-  overflow: hidden;
-  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.computer .box3 .hexo img {
-  width: 4rem;
-}
-.computer .box3 .hexo .hexologo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.computer .box3 .hexo .title {
   font-weight: bold;
-  padding-bottom: 0.5rem;
-  transition: all 0s;
 }
-.computer .box3 .hexo .hexotext {
+.computer .box3 .hexo .icon {
+  width: 4rem;
+  height: auto;
+}
+.computer .box3 .hexo .detail {
   display: none;
-}
-.computer .box3 .hexo .hexogo {
-  display: none;
-}
-.computer .box3 .hexo .hexogo > a {
-  color: #ffffff;
-}
-.computer .box3 .hexo .hexogo > a > div {
-  height: 2.5rem;
-  width: 5rem;
-  border-radius: 2rem;
-  background-color: #006a9f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .computer .box3 .hexo.show {
-  transition: height 0.7s;
   position: absolute;
-  height: 20rem;
+  height: auto;
   width: 30rem;
   left: 50%;
   top: 50%;
   margin-left: -15rem;
-  margin-top: -10rem;
+  margin-top: -15rem;
   z-index: 3;
-  padding: 3rem;
+  padding: 3rem 2rem;
 }
-.computer .box3 .hexo.show img {
-  width: 2.5rem;
+.computer .box3 .hexo.show .icon {
+  width: 3rem;
+  height: auto;
 }
-.computer .box3 .hexo.show .hexologo {
-  transition: all 0s;
-}
-.computer .box3 .hexo.show .hexotext {
-  display: block;
-}
-.computer .box3 .hexo.show .hexogo {
+.computer .box3 .hexo.show .detail {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  position: fixed;
-  bottom: 0;
-  padding: 1rem;
-}
-.footer a {
-  color: #303133;
-  transition: all 0s;
-}
-.footer a:hover {
-  color: #000000;
-}
-.footer a p {
-  transition: all 0s;
+  flex-wrap: wrap;
 }
