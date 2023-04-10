@@ -54,4 +54,7 @@ window.onload=()=>{
     app.addEvent("docs");
     app.addEvent("yuque");
     app.addEvent("hexo");
+    app.addEvent("apifox");
+    app.addEvent("pdf");
+    app.addEvent("campus-repair");
 }

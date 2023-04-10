@@ -31,6 +31,7 @@ html{
             position: fixed;
             bottom: 0;
             padding: 1rem;
+            background-color: #FAFAFA;
             a{
                 color: #303133;
                 transition: all 0s;
@@ -53,7 +54,7 @@ html{
 } 
 
 .blur-filter{
-    transition: all 0.6s;
+    // transition: all 0.6s;
     position: absolute;
     z-index: -1;
     width: 100vw;
@@ -66,7 +67,7 @@ html{
 }
 
 .appear{
-    transition: all 0.6s;
+    // transition: all 0.6s;
     z-index: 2;
     background: rgba(0, 0, 0, 0.25);
 }
@@ -169,7 +170,7 @@ html{
     padding: 1rem 2rem;
     
     .box1{
-        .boxconfig(1rem, 19rem, 15rem,1.6rem);
+        .boxconfig(0.75rem, 19rem, 15rem,1.6rem);
         .github{
             .boxconfig(0rem, 19rem, 15rem,1.6rem,#24292f,#FAFAFA,normal);
             .openconfig(8rem,7rem);
@@ -177,7 +178,7 @@ html{
     }
 
     .box2{
-        .boxconfig(1rem, 19rem, 15rem,1.6rem);
+        .boxconfig(0.75rem, 19rem, 15rem,1.6rem);
         .center();
         .box2-1{
             .boxconfig(0rem, 12rem, 15rem,1.6rem,#ffffff);
@@ -188,8 +189,8 @@ html{
             }
         }
         .box2-2{
-            margin-top: 1rem;
             .boxconfig(0rem, 6rem, 15rem,1.6rem);
+            margin-top: 1rem;
             .yuque{
                 .boxconfig(0rem, 6rem, 15rem,1.6rem,#ffffff);
                 .openconfig(7rem,7rem);
@@ -199,11 +200,46 @@ html{
     }
 
     .box3{
-        .boxconfig(1rem, 8rem, 15rem,1.6rem);
-        .hexo{
-            .boxconfig(0rem, 6rem, 15rem,1.6rem,#ffffff);
-            .border();
-            .openconfig(4rem,3rem);
+        .boxconfig(0.75rem, 19rem, 15rem,1.6rem);
+        .center();
+        .box3-1{
+            .boxconfig(0rem, 8rem, 15rem,1.6rem);
+            .hexo{
+                .boxconfig(0rem, 8rem, 15rem,1.6rem,#ffffff);
+                .border();
+                .openconfig(4rem,3rem);
+            }
+        }
+        .box3-2{
+            .boxconfig(0rem, 10rem, 15rem,1.6rem);
+            margin-top: 1rem;
+            .apifox{
+                .boxconfig(0rem, 10rem, 15rem,1.6rem,#ffffff);
+                .border();
+                .openconfig(10rem,8rem);
+            }
+        }
+    }
+
+    .box4{
+        .boxconfig(0.75rem, 19rem, 15rem,1.6rem);
+        .center();
+        .box4-1{
+            .boxconfig(0rem, 9rem, 15rem,1.6rem);
+            .pdf{
+                .boxconfig(0rem, 9rem, 15rem,1.6rem,#ffffff);
+                .border();
+                .openconfig(4rem,3rem);
+            }
+        }
+        .box4-2{
+            .boxconfig(0rem, 9rem, 15rem,1.6rem);
+            margin-top: 1rem;
+            .campus-repair{
+                .boxconfig(0rem, 9rem, 15rem,1.6rem,#ffffff);
+                .border();
+                .openconfig(10rem,8rem);
+            }
         }
     }
 }
