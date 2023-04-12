@@ -41,20 +41,17 @@ let app = {
         document.getElementsByClassName(className)[0].classList.toggle("show");
         document.getElementsByClassName("blur-filter")[0].classList.toggle("appear");
     },
-    addEvent(className){
+    add(className){
         document.getElementsByClassName(className)[0].addEventListener("click",()=>{
             this.open(className)
         },false)
+        return this
     }
 }
 
 window.onload=()=>{
     page.addEvent();
-    app.addEvent("github");
-    app.addEvent("docs");
-    app.addEvent("yuque");
-    app.addEvent("hexo");
-    app.addEvent("apifox");
-    app.addEvent("pdf");
-    app.addEvent("campus-repair");
+    app.add("github").add("docs")
+    .add("yuque").add("hexo").add("apifox")
+    .add("pdf").add("campus-repair");
 }
