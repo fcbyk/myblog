@@ -3,6 +3,7 @@ prev: false
 next: false
 outline: false
 layoutClass: my-index
+title: 主页
 ---
 
 <script setup>

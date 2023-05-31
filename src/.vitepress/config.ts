@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { nav,sidebar } from './theme-config'
+import { GITEE_SVG } from './assets/svg'
 
 let icon:string = 'https://assets.fcbyk.com/fcbykcom/icons/un-smile.png'
 
@@ -25,7 +26,8 @@ export default defineConfig({
     sidebar,
 
     socialLinks:[
-      { icon: 'github', link: 'https://github.com/fcbyk' }
+      { icon: 'github', link: 'https://github.com/fcbyk' },
+      { icon: { svg: GITEE_SVG }, link: 'https://gitee.com/fcbyk' }
     ],
 
     footer: { copyright },

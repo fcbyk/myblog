@@ -34,11 +34,11 @@ jobs:
           cache: pnpm
 
       # 运行构建脚本
-      - name: Build VuePress site
+      - name: Build VitePress site
         run: pnpm build
 
       # copy CNAME
-      - name: Build VuePress site
+      - name: copy CNAME
         run: cp CNAME src/.vitepress/dist
 
       # 查看 workflow 的文档来获取更多信息
