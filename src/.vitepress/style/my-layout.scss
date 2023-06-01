@@ -94,3 +94,7 @@
     margin-top: 24px;
   }
 }
+
+.container {
+  max-width: var(--vp-layout-max-width) !important;
+}

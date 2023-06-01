@@ -25,7 +25,7 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '开发工具',
+    title: '工具',
     items: [
       {
         icon: 'https://cdn.apifox.cn/logo/apifox-logo-256.png',
@@ -51,6 +51,56 @@ export const NAV_DATA: NavData[] = [
         link: 'https://varbook.uiuing.com/',
         desc: '标识符助手'
       },
+      {
+        icon: 'https://man.niaoge.com/public/img/favicon.ico',
+        title: 'Linux命令大全',
+        link: 'https://man.niaoge.com/',
+        desc: '查询您所需要的Linux命令教程和相关实例'
+      },
+    ]
+  },
+  {
+    title: '校园',
+    items: [
+      {
+        title: '热海大校园网',
+        link: 'http://210.37.144.92'
+      },
+      {
+        icon: 'https://co2.cnki.net/favicon.ico',
+        title: '毕业论文管理系统',
+        link: 'https://co2.cnki.net/'
+      },
+    ]
+  },  
+  {
+    title: '视频',
+    items: [
+      {
+        icon: 'https://www.bilibili.com/favicon.ico?v=1',
+        title: '哔哩哔哩',
+        link: 'https://chat.openai.com/chat',
+      },
+      {
+        icon: 'https://assets.fcbyk.com/icons/iqiyi.png',
+        title: '爱奇艺',
+        link: 'https://www.iqiyi.com/',
+      },
+      {
+        icon: 'https://v.qq.com/favicon.ico',
+        title: '腾讯视频',
+        link: 'https://v.qq.com/',
+      },
+      {
+        icon: 'https://lf1-cdn-tos.bytegoofy.com/goofy/ies/douyin_web/public/favicon.ico',
+        title: '抖音',
+        link: 'https://www.douyin.com/',
+      },
+      {
+        icon: 'https://vip.diaoyu18.com/favicon.ico',
+        title: '视频解析',
+        link: 'https://vip.diaoyu18.com/',
+      },
     ]
   },
   {
@@ -72,11 +122,6 @@ export const NAV_DATA: NavData[] = [
     title: '未分类',
     items: [
       {
-        icon: 'https://static.leetcode.cn/cn-mono-assets/production/assets/favicon-192x192.b678b282.png',
-        title: 'leetcode',
-        link: 'https://leetcode.cn/'
-      },
-      {
         icon: 'https://img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico',
         title: '阿里云',
         link: 'https://www.aliyun.com/'
@@ -86,6 +131,41 @@ export const NAV_DATA: NavData[] = [
         title: 'npm',
         link: 'https://www.npmjs.com/'
       },
+      {
+        icon: 'https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico',
+        title: '百度网盘',
+        link: 'https://pan.baidu.com/',
+      },
+      {
+        icon: 'https://static.leetcode.cn/cn-mono-assets/production/assets/favicon-192x192.b678b282.png',
+        title: 'leetcode',
+        link: 'https://leetcode.cn/'
+      },
+      {
+        icon: 'https://g.csdnimg.cn/static/logo/favicon32.ico',
+        title: 'csdn',
+        link: 'https://www.csdn.net/'
+      },
+      {
+        icon: 'https://cnnic.pub/favicon.ico',
+        title: 'v2',
+        link: 'https://cnnic.pub/'
+      },
+      {
+        icon: 'https://docs.gtimg.com/desktop/favicon2.ico',
+        title: '腾讯文档',
+        link: 'https://docs.qq.com/desktop/'
+      },
+      {
+        icon: 'https://mms.pinduoduo.com/login/favicon.ico',
+        title: '拼多多商家后台',
+        link: 'https://mms.pinduoduo.com/'
+      },
+      {
+        icon: 'https://regexr.com/assets/icons/favicon.ico',
+        title: '正则表达式练习',
+        link: 'https://regexr.com/'
+      }
     ]
   },
 ]
