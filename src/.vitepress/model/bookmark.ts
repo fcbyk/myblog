@@ -60,26 +60,12 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '校园',
-    items: [
-      {
-        title: '热海大校园网',
-        link: 'http://210.37.144.92'
-      },
-      {
-        icon: 'https://co2.cnki.net/favicon.ico',
-        title: '毕业论文管理系统',
-        link: 'https://co2.cnki.net/'
-      },
-    ]
-  },  
-  {
     title: '视频',
     items: [
       {
         icon: 'https://www.bilibili.com/favicon.ico?v=1',
         title: '哔哩哔哩',
-        link: 'https://chat.openai.com/chat',
+        link: 'https://www.bilibili.com/',
       },
       {
         icon: 'https://assets.fcbyk.com/icons/iqiyi.png',

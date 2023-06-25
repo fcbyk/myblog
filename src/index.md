@@ -7,8 +7,11 @@ title: 主页
 ---
 
 <script setup>
-// import MNavLink from './components/MNavLink.vue'
+// import MNavLink from './components/MNavLink.vue'd
+// import {selectSort} from "../../js-sort/dist/index"
+// import {foods} from "../../js-sort/test/data"
 
+// selectSort(foods,"price").print()
 </script>
 
 ```c
