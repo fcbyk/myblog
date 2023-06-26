@@ -12,8 +12,8 @@ export const nav:DefaultTheme.NavItem[] = [
       text: '书签',
       link: '/bookmark/',
     },
-    {
-      text: '关于我',
-      link: '/about/me',
-    }
+    // {
+    //   text: '关于我',
+    //   link: '/',
+    // }
 ]
