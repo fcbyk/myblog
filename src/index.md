@@ -37,13 +37,13 @@ Hello，我是不愉，**23年应届毕业生**，关于域名和昵称的由来
 
 ## 专业能力
 
-本人技术栈已在后续列出，包括但不限于这些的技术，对计算机学科 <u>**有一定的广度，但缺乏深度**</u>。有一定写数据结构，写算法的能力，但较弱，也是目前的一个学习方向，偶尔会刷力扣。
+本人技术栈已在后续列出，包括但不限于这些的技术，对计算机学科 <u>**有相对的广度，但缺乏深度**</u>。有一定写数据结构，写算法的能力，但较弱，也是目前的一个学习方向，偶尔会刷力扣。
 
 <u>**善于使用工具和阅读文档**</u> 辅助开发，如使用ChatGPT解决遇到的问题，节省开发时间。使用Apifox写 [接口文档](https://goods-online.apifox.cn/)，进行接口调式。使用即时设计绘制 [前端页面的草稿](https://js.design/f/-O0fJs?p=NjuH8Hiwv5)，把想法记录下来。有阅读文档的习惯，可以通过读文档去使用内置对象和第三方库。
 
 <u>**能使用Linux系统**</u>，很长一段时间都有接触Linux，大专时使用VMware，本科时买了阿里云服务器和域名。能完成一些基础操作，配置环境，安装软件，部署项目等。
 
-<u>**能写前端，也能写后端**</u>，以至于前后端的能力都一般，偏前端多一点。本人喜欢前端，喜欢创作，喜欢使用代码去实现自己的一些小想法。接触过vue3，也写过一些组合式API的练习，但暂时没有做过相关的项目。后续会往前端方向学习和发展。希望能能找到一份前端开发的工作。
+<u>**能写前端，也能写后端**</u>，但偏前端多一点。本人喜欢前端，喜欢创作，喜欢使用代码去实现自己的一些小想法。接触过vue3，也写过一些组合式API的练习，但暂时没有做过相关的项目。后续会往前端方向学习和发展。希望能能找到一份前端开发的工作。
 
 ## 联系方式
 
@@ -58,24 +58,24 @@ Hello，我是不愉，**23年应届毕业生**，关于域名和昵称的由来
 
 ## 技术栈  
 <div class="skill">
-    <img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" />
-    <img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" />
-    <img src="https://profilinator.rishav.dev/skills-assets/sass-original.svg" alt="Sass" />
-    <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" />
-    <img src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" />
-    <img src="https://profilinator.rishav.dev/skills-assets/vuejs-original-wordmark.svg" alt="Vue.js" />
-    <img src="https://profilinator.rishav.dev/skills-assets/webpack-original.svg" alt="Webpack"/>
+    <img src="./.vitepress/assets/icons/css3-original-wordmark.svg" alt="CSS3" />
+    <img src="./.vitepress/assets/icons/html5-original-wordmark.svg" alt="HTML5" />
+    <img src="./.vitepress/assets/icons/sass-original.svg" alt="Sass" />
+    <img src="./.vitepress/assets/icons/javascript-original.svg" alt="JavaScript" />
+    <img src="./.vitepress/assets/icons/typescript-original.svg" alt="TypeScript" />
+    <img src="./.vitepress/assets/icons/vuejs-original-wordmark.svg" alt="Vue.js" />
+    <img src="./.vitepress/assets/icons/webpack-original.svg" alt="Webpack"/>
 </div>
 <div class="skill">
-    <img src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" />
-    <img src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" />
-    <img src="https://profilinator.rishav.dev/skills-assets/springio-icon.svg" alt="Spring" />
-    <img src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" />
+    <img src="./.vitepress/assets/icons/nodejs-original-wordmark.svg" alt="Node.js" />
+    <img src="./.vitepress/assets/icons/java-original-wordmark.svg" alt="Java" />
+    <img src="./.vitepress/assets/icons/springio-icon.svg" alt="Spring" />
+    <img src="./.vitepress/assets/icons/mysql-original-wordmark.svg" alt="MySQL" />
 </div>
 <div class="skill">
-    <img src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" />
-    <img src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" />
-    <img src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" />
+    <img src="./.vitepress/assets/icons/linux-original.svg" alt="Linux" />
+    <img src="./.vitepress/assets/icons/git-scm-icon.svg" alt="Git" />
+    <img src="./.vitepress/assets/icons/docker-original-wordmark.svg" alt="Docker" />
 </div>
 
 <style lang="scss" scoped>
